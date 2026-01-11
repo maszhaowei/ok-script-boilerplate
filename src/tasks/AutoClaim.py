@@ -3,12 +3,16 @@ from ok import TriggerTask
 liveEndText = "直播已结束"
 claimText = "立即领取"
 
+intervalKey = "检测间隔(秒)"
+defaultInterval = 30
+
 
 class AutoClaim(TriggerTask):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.name = "自动领取"
+        self.default_config.update({intervalKey: defaultInterval})
         self.found_count = 0
 
     def run(self):
@@ -29,4 +33,5 @@ class AutoClaim(TriggerTask):
                         f"Target button found by ocr({self.found_count})", True
                     )
                     self.click_box(ocrBox)
-        self.sleep(10)
+        interval = self.config.get(intervalKey)
+        self.sleep(max(interval, 1) if type(interval) is int else defaultInterval)
