@@ -1,56 +1,33 @@
 {
-    "info": {
-        "year": 2025,
-        "version": "1.0",
-        "description": "Annotations in COCO format, created by T-Rex Label",
-        "date_created": "2025-12-27T09:16:40.712Z"
-    },
-    "images": [
-        {
-            "id": 0,
-            "file_name": "images/0.png",
-            "width": 502,
-            "height": 940
-        }
-    ],
-    "categories": [
-        {
-            "id": 0,
-            "name": "home"
-        },
-        {
-            "id": 1,
-            "name": "coupon"
-        }
-    ],
-    "annotations": [
-        {
-            "id": 0,
-            "image_id": 0,
-            "category_id": 1,
-            "area": 2486.487852,
-            "bbox": [
-                154.763611,
-                556.23584,
-                96.712097,
-                25.710205
-            ],
-            "segmentation": [],
-            "iscrowd": 0
-        },
-        {
-            "id": 1,
-            "image_id": 0,
-            "category_id": 0,
-            "area": 540.805749,
-            "bbox": [
-                15.022258,
-                39.678791,
-                24.433736,
-                22.133568
-            ],
-            "segmentation": [],
-            "iscrowd": 0
-        }
-    ]
+  "info": {
+    "year": 2025,
+    "version": "1.0",
+    "description": "Annotations in COCO format, created by T-Rex Label",
+    "date_created": "2025-12-27T09:16:40.712Z"
+  },
+  "images": [
+    {
+      "id": 0,
+      "file_name": "images/0.png",
+      "width": 502,
+      "height": 940
+    }
+  ],
+  "categories": [
+    {
+      "id": 0,
+      "name": "closebutton"
+    }
+  ],
+  "annotations": [
+    {
+      "id": 0,
+      "image_id": 0,
+      "category_id": 0,
+      "area": 325.540264,
+      "bbox": [405.243561, 412.926178, 18.298737, 17.790314],
+      "segmentation": [],
+      "iscrowd": 0
+    }
+  ]
 }
