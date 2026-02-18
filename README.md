@@ -33,3 +33,10 @@ assets cv2使用的template, 需要使用coco格式
 * 星痕共鸣 [https://github.com/Sanheiii/ok-star-resonance](https://github.com/Sanheiii/ok-star-resonance)
 * 二重螺旋 [https://github.com/BnanZ0/ok-duet-night-abyss](https://github.com/BnanZ0/ok-duet-night-abyss)
 * 白荆回廊(停止更新) [https://github.com/ok-oldking/ok-baijing](https://github.com/ok-oldking/ok-baijing)
+
+## 如何运行两个实例并捕获同一个进程的两个窗口
+1. 打开窗口a和b
+2. 拷贝代码运行新的实例(ok-script检测实例: mutex_name = hashlib.md5(path.encode()).hexdigest())
+3. 假设窗口名为a和b，如果两个实例"选择窗口"内显示的都是窗口a，则先关闭窗口a，用实例2捕获窗口b(多试几次，第一次可能会失败)
+4. 打开窗口a并用实例1捕获窗口a
+* Note: 两个实例日志的hwnd应该不同(handle_mute hwnd:)
